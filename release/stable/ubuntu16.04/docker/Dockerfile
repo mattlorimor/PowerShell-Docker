@@ -28,7 +28,7 @@ RUN apt-get update \
         ca-certificates \
         gss-ntlmssp \
     # Download the Linux package and save it
-    && echo ${PS_PACKAGE_URL}
+    && echo ${PS_PACKAGE_URL} \
     && curl -sSL ${PS_PACKAGE_URL} -o /tmp/powershell.deb \
     && apt install -y /tmp/powershell.deb \
     && apt-get dist-upgrade -y \
